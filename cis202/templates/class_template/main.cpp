@@ -1,36 +1,36 @@
 #include <iostream>
 using namespace std;
 
-template<typename TheType>
+template<typename T>
 class TripleItem {
 public:
-   TripleItem(TheType val1 = 0, TheType val2 = 0, TheType val3 = 0);
+   TripleItem(T val1 = 0, T val2 = 0, T val3 = 0);
    void PrintAll() const;   // Print all data member values
-   TheType MinItem() const; // Return min data member value
+   T MinItem() const; // Return min data member value
 private:
-   TheType item1;           // Data value 1
-   TheType item2;           // Data value 2
-   TheType item3;           // Data value 3
+   T item1;           // Data value 1
+   T item2;           // Data value 2
+   T item3;           // Data value 3
 };
 
-template<typename TheType>
-TripleItem<TheType>::TripleItem(TheType i1, TheType i2, TheType i3) {
+template<typename T>
+TripleItem<T>::TripleItem(T i1, T i2, T i3) {
    item1 = i1;
    item2 = i2;
    item3 = i3;
 }
 
 // Print all data member values
-template<typename TheType>
-void TripleItem<TheType>::PrintAll() const {
+template<typename T>
+void TripleItem<T>::PrintAll() const {
    cout << "(" << item1 << "," << item2
         << "," << item3 << ")" << endl;
 }
 
 // Return min data member value
-template<typename TheType>
-TheType TripleItem<TheType>::MinItem() const {
-   TheType minVal = item1; // Holds value of min item, init to first item
+template<typename T>
+T TripleItem<T>::MinItem() const {
+   T minVal = item1; // Holds value of min item, init to first item
    
    if (item2 < minVal) {
       minVal = item2;
